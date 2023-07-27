@@ -5,7 +5,7 @@ import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 function Navigation() {
     const links = [
         { label: 'Shop', path: '/shop' },
-        { label: 'Sign in', path: '/sign-in' },
+        { label: 'Sign in', path: '/auth' },
     ];
 
     const renderedLinks = links.map((link) => {
