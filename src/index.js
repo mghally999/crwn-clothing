@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { NavigationProvider } from './context/navigation.context';
+import { NavigationProvider } from './contexts/navigation.context';
+import { UserProvider } from './contexts/user.context';
 import './index.scss';
 import App from './App';
 
@@ -9,6 +10,8 @@ const root = ReactDOM.createRoot(el);
 
 root.render(
   <NavigationProvider>
-    <App />
+    <UserProvider>
+      <App />
+    </UserProvider>
   </NavigationProvider>
 );

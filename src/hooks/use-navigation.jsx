@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import NavigationContext from "../context/navigation.context";
+import NavigationContext from "../contexts/navigation.context";
 
 function useNavigation() {
     return useContext(NavigationContext);
