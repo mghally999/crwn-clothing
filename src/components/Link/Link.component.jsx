@@ -12,9 +12,7 @@ function Link({ to, children }) {
         navigate(to);
     };
 
-    return <div className="nav-links-container">
-        <a className="nav-link" href={to} onClick={handleClick}> {children} </a>
-    </div>
+    return <> <a className="nav-link" href={to} onClick={handleClick}> {children} </a> </>
 }
 
 export default Link;
