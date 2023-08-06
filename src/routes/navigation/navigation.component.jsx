@@ -3,32 +3,22 @@ import Route from '../../routes/route/route.component';
 import Link from '../../components/Link/Link.component';
 import Home from '../home/home.component';
 import Authentication from '../authentication/authentication.component';
+import Shop from '../shop/shop.component';
+
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+
 import './navigation.styles.scss';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import { UserContext } from '../../contexts/user.context';
+import { CartContext } from '../../contexts/cart.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
-const Shop = () => {
-    return 'SHOP';
-};
 
 function Navigation() {
 
     const { currentUser } = useContext(UserContext);
-
-    // const links = [
-    //     { label: 'Shop', path: '/shop' },
-    //     currentUser ? { label: 'Sign out', path: '/auth' } : { label: 'Sign in', path: '/auth' },
-    // ];
-
-
-    // const renderedLinks = links.map((link) => {
-    //     return <Link
-    //         key={link.label}
-    //         to={link.path}
-    //         className="mb-3"
-    //     > {link.label} </Link>;
-    // });
+    const { isCartOpen } = useContext(CartContext);
 
     return (
         <>
@@ -48,7 +38,9 @@ function Navigation() {
                         </Link> :
                         <Link to="/auth" className="mb-3">Sign in</Link>
                     }
+                    <CartIcon />
                 </div>
+                {isCartOpen && <CartDropdown />}
             </div>
 
             <Route path="/">
