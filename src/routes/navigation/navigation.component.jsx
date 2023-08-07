@@ -8,6 +8,7 @@ import Shop from '../shop/shop.component';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
+import CheckOut from '../checkout/checkout.component';
 import './navigation.styles.scss';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import { UserContext } from '../../contexts/user.context';
@@ -51,6 +52,9 @@ function Navigation() {
             </Route>
             <Route path="/auth">
                 <Authentication />
+            </Route>
+            <Route path="/checkout">
+                <CheckOut />
             </Route>
         </>
     );
