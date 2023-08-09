@@ -29,8 +29,9 @@
     align-items: center;
     justify-content: flex-end;
   }
+
   .nav-link {
-    padding: 10px 15px;
+    padding: 10px 0px;
     cursor: pointer;
 
     @media screen and (max-width: 800px) {
