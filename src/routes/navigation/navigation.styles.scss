@@ -7,7 +7,7 @@
 
   @media screen and (max-width: 800px) {
     height: 60px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     margin-bottom: 20px;
   }
 
@@ -31,11 +31,12 @@
   }
 
   .nav-link {
-    padding: 10px 0px;
+    padding: 10px 10px;
     cursor: pointer;
 
     @media screen and (max-width: 800px) {
       width: 80%;
+      padding: 10px 0px;
     }
   }
 }
