@@ -16,6 +16,7 @@ export const addCartItem = (cartItems, productToAdd) => {
     return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
+
 export const removeCartItem = (cartItems, cartItemToRemove) => {
     // Find the cartItems to remove
     const existingCartItem = cartItems.find((cartItem) => cartItem.id === cartItemToRemove.id);
@@ -74,7 +75,6 @@ export const CartProvider = ({ children }) => {
     const clearItemFromCart = (cartItemToClear) => {
         setCartItems(clearCartItem(cartItems, cartItemToClear));
     };
-
 
     const value = {
         isCartOpen,
