@@ -3,6 +3,12 @@
   flex-direction: column;
   width: 380px;
 
+  @media screen and (max-width: 800px) {
+    display: grid;
+    grid-column: 1 / -1;
+    width: unset;
+  }
+
   h2 {
     margin: 10px 0;
   }
